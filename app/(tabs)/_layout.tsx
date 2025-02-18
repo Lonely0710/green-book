@@ -1,6 +1,6 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-import { Platform } from 'react-native';
+import { Platform, View } from 'react-native';
 
 import { HapticTab } from '@/components/HapticTab';
 import { IconSymbol } from '@/components/ui/IconSymbol';
@@ -34,10 +34,42 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="index_all"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'All',
+          tabBarItemStyle: {
+            display: 'none'
+          },
+        }}
+      />
+      <Tabs.Screen
+        name="index_follow"
+        options={{
+          title: 'Follow',
+          tabBarItemStyle: {
+            display: 'none'
+          },
+        }}
+      />
+      <Tabs.Screen
+        name="add"
+        options={{
+          title: 'Add',
+          tabBarIcon: ({ color }) => (
+            <View className='w-14 h-10 mt-3 bg-myGreen rounded-full flex items-center justify-center'>
+              <IconSymbol size={20} name="plus" color="white" />
+            </View>
+          ),
+          tabBarLabelStyle: {
+            display: 'none'
+          },
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.fill" color={color} />,
         }}
       />
     </Tabs>
