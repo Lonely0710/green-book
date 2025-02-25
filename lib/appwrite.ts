@@ -2,14 +2,16 @@ import { Account, Avatars, Client, Databases, ID, ImageGravity, Query, Storage }
 import { User } from './model'
 import { ImageResult } from 'expo-image-manipulator'
 
-const client = new Client().setEndpoint('https://cloud.appwrite.io/v1').setProject('67b4052c0014071b7255')
+const client = new Client().setEndpoint('https://cloud.appwrite.io/v1').setProject('YOUR_PROJECT_ID')
 
-const databaseID = '67b4055300271918c427'
-const collectionIdUser = '67b4063900372acac570'
-const collectionIdPost = '67b4192000362217a172'
-const collectionIdComment = '67b4198c00178554af81'
-const collectionIdFollow = '67b41994002c566db56c'
-const bucketID = '67b430d8003dc99ffcde'
+const databaseID = 'YOUR_DATABASE_ID'
+const collectionIdUser = 'YOUR_COLLECTION_ID_USER'
+const collectionIdPost = 'YOUR_COLLECTION_ID_POST'
+const collectionIdComment = 'YOUR_COLLECTION_ID_COMMENT'
+const collectionIdFollow = 'YOUR_COLLECTION_ID_FOLLOW'
+const bucketID = 'YOUR_BUCKET_ID'
+
+// Please replace the placeholders with actual IDs from your Appwrite console.
 
 const account = new Account(client)
 const database = new Databases(client)
